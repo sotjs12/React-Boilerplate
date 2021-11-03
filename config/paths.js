@@ -19,7 +19,6 @@ module.exports = {
   appPackageJson: resolveApp('package.json'),
   appHtml: resolveApp('public/index.html'),
   appIndexJs: resolveApp('src/index.tsx'),
-  appPackageJson: resolveApp('package.json'),
   appSrc: resolveApp('src'),
   appTsConfig: resolveApp('tsconfig.json'),
   appJsConfig: resolveApp('jsconfig.json'),
