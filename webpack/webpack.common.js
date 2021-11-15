@@ -80,6 +80,7 @@ module.exports = {
     alias: {
       '@/static': path.resolve(__dirname, '../public/static'),
       '@': path.resolve(__dirname, '../src'),
+      '@mui/styled-engine': '@mui/styled-engine-sc',
     },
     extensions: ['.tsx', '.ts', '.js'],
   },
