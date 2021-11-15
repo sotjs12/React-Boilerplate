@@ -1,5 +1,10 @@
 import styled, { css } from 'styled-components';
 
+type Props = {
+  github?: boolean;
+  active?: boolean;
+};
+
 export const StyledHeader = styled.header`
   box-shadow: 0 0px 19px 0px #0000001a;
   padding: 0px 20px;
@@ -45,18 +50,8 @@ export const Menu = styled.div`
   }
 `;
 
-type Props = {
-  github?: boolean;
-  active?: boolean;
-};
 export const MenuItem = styled.li<Props>`
   padding: 8px 10px;
-  @include mobile {
-    & {
-      display: none;
-      padding: 0 10px;
-    }
-  }
 
   ${props =>
     props.github &&
@@ -69,12 +64,6 @@ export const MenuItem = styled.li<Props>`
 `;
 
 export const MenuItemLink = styled.a<Props>`
-  @include mobile {
-    & {
-      padding: 3px 15px;
-      font-size: 14px;
-    }
-  }
   display: block;
   text-align: center;
   font-size: 15px;
@@ -111,17 +100,17 @@ export const MobileMenuButton = styled.a`
   position: relative;
   display: none;
   margin-left: 20px;
-  @include mobile {
-    & {
+
+  ${props => props.theme.mobile` // theme props의 media 객체 사용하기
+     & {
       display: flex;
     }
-  }
+  `};
+
   span {
     display: block;
     width: 100%;
     height: 3px;
-    background-color: $primary-color;
-
     &:not(:last-child) {
       margin-bottom: 6px;
     }

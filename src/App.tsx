@@ -5,7 +5,10 @@ import { Helmet } from 'react-helmet-async';
 import { history } from '@/store';
 import { ThemeProvider } from 'styled-components';
 
-import Layout, { theme, GlobalStyles } from './layouts';
+import Layout from './layouts';
+import GlobalStyles from '@/styles/global';
+import theme from '@/styles/theme';
+
 import PageLoading from '@/components/page-loading';
 
 import '@/locales/i18n';

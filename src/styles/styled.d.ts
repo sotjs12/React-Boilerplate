@@ -1,4 +1,5 @@
 import 'styled-components';
+import { ThemedCssFunction } from 'styled-components';
 
 declare module 'styled-components' {
   export type Active = {
@@ -11,5 +12,10 @@ declare module 'styled-components' {
     warning: string;
     error: string;
     text: string;
+
+    mobile?: ThemedCssFunction<DefaultTheme>;
+    tablet?: ThemedCssFunction<DefaultTheme>;
+    laptop?: ThemedCssFunction<DefaultTheme>;
+    desktop?: ThemedCssFunction<DefaultTheme>;
   }
 }

@@ -1,12 +1,11 @@
 import NotFound from '@/components/not-found';
-// import CoreRoute from '@/features/core/route';
-// import HomeRoute from '@/features/home/route';
+import CoreRoute from '@/features/core/route';
+import HomeRoute from '@/features/home/route';
 
-// const appRoutes = [...CoreRoute, ...HomeRoute];
-// const appRoutes = [];
+const appRoutes = [...CoreRoute, ...HomeRoute];
 
 export default [
-  // ...appRoutes,
+  ...appRoutes,
   {
     path: '*',
     layout: {

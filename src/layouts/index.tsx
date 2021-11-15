@@ -1,6 +1,4 @@
 import React, { Fragment } from 'react';
-import GlobalStyles from '../styles/global';
-import theme from '@/styles/theme';
 
 import Header from './header';
 import Main from './main';
@@ -16,5 +14,4 @@ const Layout: React.FC = () => {
   );
 };
 
-export { GlobalStyles, theme };
 export default Layout;

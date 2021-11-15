@@ -12,8 +12,8 @@ export type LayoutAction = {
 };
 
 const initialState: ILayout = {
-  footer: true,
-  header: true,
+  footer: false,
+  header: false,
 };
 
 export const layoutSlice = createSlice({

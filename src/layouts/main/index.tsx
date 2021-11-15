@@ -25,8 +25,8 @@ const Main: React.FC = () => {
 
   const updateDisplayLayout = (currentLayout: ILayout, layout: ILayout) => {
     const layoutUpdated: ILayout = isEmptyObject(currentLayout)
-      ? { header: !!currentLayout.header, footer: !!currentLayout.footer }
-      : { header: true, footer: true };
+      ? { header: true, footer: true }
+      : { header: !!currentLayout.header, footer: !!currentLayout.footer };
 
     if (!compareTwoObject(layoutUpdated, layout)) {
       setTimeout(() => dispatch(setDisplayLayout(layoutUpdated)));

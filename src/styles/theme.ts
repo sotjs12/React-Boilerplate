@@ -1,4 +1,5 @@
 import { DefaultTheme } from 'styled-components';
+import media from './media';
 
 const theme: DefaultTheme = {
   primary: '#257aa6',
@@ -7,6 +8,8 @@ const theme: DefaultTheme = {
   warning: '#faad14',
   error: '#f5222d',
   text: '#333',
+
+  ...media,
 };
 
 export default theme;
