@@ -14,8 +14,7 @@
     "typeRoots": ["config/@types", "node_modules/@types"],
     "paths": {
       "@/static/*": ["public/static/*"],
-      "@/*": ["src/*"],
-      "@mui/styled-engine": ["./node_modules/@mui/styled-engine-sc"]
+      "@/*": ["src/*"]
     }
   },
   "exclude": ["node_modules"]

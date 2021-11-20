@@ -14,5 +14,5 @@ export const StyledPageLoading = styled.div<Props>`
   bottom: 0px;
   z-index: 9999;
   background-color: rgba(255, 255, 255, 0.2);
-  display: ${props => (props.showLoading ? '' : 'none')};
+  display: ${({ showLoading }) => (showLoading ? '' : 'none')};
 `;

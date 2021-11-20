@@ -6,7 +6,7 @@ type Props = {
 };
 
 export const Dropdown = styled.div<Props>`
-  color: ${props => props.theme.primary};
+  color: ${({ theme }) => theme.palette.primary.main};
   width: ${(props => props.width) || '100%'};
   position: relative;
   border-radius: 8px;
@@ -15,10 +15,10 @@ export const Dropdown = styled.div<Props>`
 export const DropdownSelectBox = styled.div<Props>`
   .dropdown-caret {
     width: 12px;
-    fill: ${props => props.theme.primary};
+    fill: ${({ theme }) => theme.palette.primary.light};
 
-    ${props =>
-      props.show &&
+    ${({ show }) =>
+      show &&
       css`
         transform: rotate(180deg);
       `};
@@ -57,8 +57,8 @@ export const DropdownList = styled.ul<Props>`
     transform: translateY(-100%);
   }
 
-  ${props =>
-    props.show &&
+  ${({ show }) =>
+    show &&
     css`
       display: block;
     `}
@@ -71,7 +71,7 @@ export const DropdownItem = styled.li`
   border-radius: 8px;
   cursor: pointer;
   &:hover {
-    color: ${props => props.theme.primary};
+    color: ${({ theme }) => theme.palette.primary.dark};
     background-color: #f1fbff;
   }
 `;

@@ -3,11 +3,11 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import { ConnectedRouter } from 'connected-react-router';
 import { Helmet } from 'react-helmet-async';
 import { history } from '@/store';
-import { ThemeProvider } from 'styled-components';
 
+import { ThemeProvider } from 'styled-components';
 import Layout from './layouts';
 import GlobalStyles from '@/styles/global';
-import theme from '@/styles/theme';
+import theme from '@/styles/styled-theme';
 
 import PageLoading from '@/components/page-loading';
 

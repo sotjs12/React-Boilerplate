@@ -16,7 +16,7 @@ import { Wrapper } from './styled';
 type RouteProps = {
   component: any;
   path: string;
-  layout: ILayout;
+  layout?: ILayout;
 };
 
 const Main: React.FC = () => {
@@ -27,7 +27,6 @@ const Main: React.FC = () => {
     const layoutUpdated: ILayout = isEmptyObject(currentLayout)
       ? { header: true, footer: true }
       : { header: !!currentLayout.header, footer: !!currentLayout.footer };
-
     if (!compareTwoObject(layoutUpdated, layout)) {
       setTimeout(() => dispatch(setDisplayLayout(layoutUpdated)));
     }

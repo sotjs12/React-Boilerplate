@@ -43,8 +43,8 @@ export const FormInputBox = styled.div<Props>`
     }
   }
 
-  ${props =>
-    props.light &&
+  ${({ light }) =>
+    light &&
     css`
       text-align: right;
       color: #fff;
@@ -64,12 +64,12 @@ export const Footer = styled.footer`
 
   a {
     text-decoration: none;
-    color: ${props => props.theme.primary};
+    color: ${({ theme }) => theme.palette.primary.main};
   }
 
   p {
     font-size: 13px;
-    color: $text-color;
+    color: ${({ theme }) => theme.palette.primary.dark};
     line-height: 2;
   }
 
@@ -79,7 +79,7 @@ export const Footer = styled.footer`
     padding: 13px 15px;
     border-radius: 100px;
     border: none;
-    background: ${props => props.theme.primary};
+    background: ${({ theme }) => theme.palette.primary.dark};
     outline: none;
     color: #fff;
   }

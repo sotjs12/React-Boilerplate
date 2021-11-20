@@ -24,40 +24,40 @@ export const LoadingInner = styled.div<Props>`
   height: 100%;
   border-radius: 50%;
 
-  ${props =>
-    props.one &&
+  ${({ one, theme, white }) =>
+    one &&
     css`
       left: 0%;
       top: 0%;
       animation: ${rotateOne} 1s linear infinite;
-      border-bottom: 3px solid ${props.theme.primary};
-      ${props.white &&
+      border-bottom: 3px solid ${theme.palette.primary.main};
+      ${white &&
       css`
         border-bottom: 3px solid #efeffa;
       `}
     `}
 
-  ${props =>
-    props.two &&
+  ${({ two, theme, white }) =>
+    two &&
     css`
       right: 0%;
       top: 0%;
       animation: ${rotateTwo} 1s linear infinite;
-      border-bottom: 3px solid ${props.theme.primary};
-      ${props.white &&
+      border-bottom: 3px solid ${theme.palette.primary.main};
+      ${white &&
       css`
         border-right: 3px solid #efeffa;
       `}
     `}
 
-  ${props =>
-    props.three &&
+  ${({ three, theme, white }) =>
+    three &&
     css`
       right: 0%;
       bottom: 0%;
       animation: ${rotateThree} 1s linear infinite;
-      border-bottom: 3px solid ${props.theme.primary};
-      ${props.white &&
+      border-bottom: 3px solid ${theme.palette.primary.main};
+      ${white &&
       css`
         border-top: 3px solid #efeffa;
       `}
